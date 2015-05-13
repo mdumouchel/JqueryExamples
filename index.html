@@ -11,37 +11,38 @@
 	</div>-->
 
 	<table>
-    <thead>
-        <tr><th>First name</th><th>Last name</th></tr>
-    </thead>
-    <tbody data-bind="foreach: bitStrings">
-        <tr>
-            <td><input type="text" data-bind="value: firstName"></input></tc>
-            <td>
-            	<select data-bind="value: numberOfBits">
-				  <option value="4">4</option>
-				  <option value="8">8</option>
-				</select>
-			</td>
+	    <thead>
+	        <tr><th>First name</th><th>Last name</th></tr>
+	    </thead>
+	    <tbody data-bind="foreach: bitStrings">
+	        <tr>
+	            <td><input type="text" data-bind="value: firstName"></input></tc>
+	            <td>
+	            	<select data-bind="value: numberOfBits">
+					  <option value="4">4</option>
+					  <option value="8">8</option>
+					</select>
+				</td>
 
-			<td data-bind="foreach: daString">
-				<select data-bind="value: $data">
-				  <option value="X">X</option>
-				  <option value="0">0</option>
-				  <option value="1">1</option>
-				</select>
-			</td>
-        </tr>
-    </tbody>
-    <!-- http://knockoutjs.com/documentation/binding-context.html -->
-    <div data-bind="text: ko.toJSON($data)"></div>
-    <div data-bind="foreach: daString">
-		<select data-bind="value: value">
-		  <option value="X">X</option>
-		  <option value="0">0</option>
-		  <option value="1">1</option>
-		</select>
-	</div>
-</table>
+				<td data-bind="foreach: daString">
+					<select data-bind="value: value">
+					  <option value="X">X</option>
+					  <option value="0">0</option>
+					  <option value="1">1</option>
+					</select>
+				</td>
+	        </tr>
+	    </tbody>
+	    <!-- http://knockoutjs.com/documentation/binding-context.html -->
+	    <div data-bind="text: ko.toJSON($data)"></div>
+	    
+	    <div data-bind="foreach: someName">
+			<select data-bind="value: value">
+			  <option value="X">X</option>
+			  <option value="0">0</option>
+			  <option value="1">1</option>
+			</select>
+		</div>
+	</table>
 </body>
 </html>

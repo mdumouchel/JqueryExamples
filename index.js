@@ -25,7 +25,7 @@ $( document ).ready(function(){
 	}*/
 	var viewModel = {
 		bitStrings: ko.observableArray(),
-		daString: ko.observableArray([ {value: ko.observable("X")}, {value: ko.observable("X")}, {value: ko.observable("X")} ])
+		someName: ko.observableArray([ {value: ko.observable("X")}, {value: ko.observable("X")}, {value: ko.observable("X")} ])
 		//The following dont work...
 		//daString: ko.observableArray([ko.observable("0"), ko.observable("0"), ko.observable("0")])
 		//daString: ko.observableArray([0,0,0])
@@ -37,11 +37,10 @@ $( document ).ready(function(){
 		viewModel.bitStrings.push({ 
             	firstName: ko.observable('Bert'), 
             	numberOfBits: ko.observable(4),
-            		daString: ko.observableArray(["0", "0", "0"])
+            	daString: ko.observableArray([ {value: ko.observable("0")}, {value: ko.observable("X")}, {value: ko.observable("X")} ])
         	
             	//daString: ko.observableArray([{value: "0"}, {value: "0"}, {value: "0"}])
         	});
-
 		/*viewModel.bitStrings()[viewModel.bitStrings().length - 1].daString = ko.observableArray();
 		for(var s=0; s < 4; s++) {
 			viewModel.bitStrings[viewModel.bitStrings().length - 1].daString().push("1");
